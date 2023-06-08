@@ -1,0 +1,91 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Upload Documents</title>
+    <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW" />
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+    <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+    <link href="css/bootstrap.min.css" type="text/css" rel="stylesheet" media="all">
+    <link href="css/paysense-lp-new-styles.css" type="text/css" rel="stylesheet" media="all">
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+</head>
+
+<body class="paysense-body">
+    <header>
+        <div class="container pd-top-25">
+            <div class="row">
+                <div class="col-md-2 col-xs-6"><img src="images/paysense-images/paysense-logo-new.png" alt="Paysense logo"></div>
+                <div class="col-md-2 col-xs-6 col-md-push-8 text-right"><img src="images/paysense-images/d4l-logo.png" alt="Paysense logo"></div>
+            </div>
+        </div>
+    </header>
+
+    <div class="container flex-container pd-36-top">
+        <div class="paysense-form">
+            <div class="left-panel">
+                <div class="left-panel-inner">
+                    <h1><span class="font-30"> Getting a</span> <span class="bold-font font-30">personal loan</span> <span class="font-39">was never this <span class="bold-font">easy</span></span></h1>
+                    <ul>
+                        <li>Instant personal loans</li>
+                        <li>Quick Approvals & Disbursals</li>
+                        <li>Easy Collection of Documents</li>
+                        <li>Affordable EMI plans</li>
+                        <li>One-click subsequent personal loans</li>
+                        <li>Zero Credit History</li>
+                    </ul>
+                </div>
+                <div class="payscence-illus">
+                    <img src="images/paysense-images/paysence-illustration.png">
+                </div>
+            </div>
+            <div class="right-panel">
+                <div class="row">
+                    <div class="col-md-12">
+                        <ul>
+                            <li><span class="span-list-inactive"><img src="images/paysense-images/tick-blue.png"></span>Get Started</li>
+                            <li><span class="span-list-inactive"><img src="images/paysense-images/tick-blue.png"></span>More Details</li>
+                            <li class="active-listing"><span class="span-list-active">3</span>Upload Documents</li>
+                        </ul>
+                        <hr>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <h5>UPLOAD DOCUMENTS</h5>
+                        <p>We need below document to process your final loan application</p>
+                    </div>
+                </div>
+            
+                <form action="includes/form-action/save-paysense-upload-documents.php" method="post" enctype="multipart/form-data" id="form3">
+                    <input type="hidden" name="reqLoanPersonalID" id="reqLoanPersonalID" value="">
+                    <h4></h4>
+                    <div class="row">
+                        <select name="<?php echo $check_app_status_api_resp_arr[$cntr]['required_doc_category'][$i]; ?>" onchange="display_sub_cat_fields_<?php echo $i+1; ?>(this)" class="paysense-input light-text">
+                            <option value="">Document Type</option> 
+                            <option value=""></option>
+                        </select>
+                    </div>
+
+                    <div id=""></div>
+                    <div class='text-center error'>Got the empty response from check application status api.</div>
+                    <div class="row" style="display: none;">
+                        <div class="col-md-12">
+                            <button type="submit" name="proceed" id="proceed">Proceed</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div class="clearfix"></div>
+    </div>
+  
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/jquery.validate.js"></script>
+    <script src="js/paysense-upload-documents-val.js"></script>
+</body>
+
+</html>
